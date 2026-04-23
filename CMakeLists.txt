@@ -8,7 +8,7 @@ if(NOT CMAKE_CXX_STANDARD)
   set(CMAKE_CXX_STANDARD 14)
 endif()
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
-  add_compile_options(-Wall -Wextra -Wpedantic)
+    add_compile_options(-w)
 endif()
 
 ####################find package#####################################
@@ -33,6 +33,7 @@ include_directories(
 
 #link library directories
 link_directories(${YDLIDAR_SDK_LIBRARY_DIRS})
+#link_directories(${CMAKE_SOURCE_DIR}/../../install/ydlidar_sdk/lib)
 
 #---------------------------------------------------------------------------------------
 # generate excutable and add libraries
